@@ -1,0 +1,347 @@
+/* Custom */
+
+* {
+    box-sizing: border-box;  
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Comic Sans MS, cursive, sans-serif;
+    background-color: #bfbfbf;   
+}
+
+/* Header (logo and navigation) */
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.wrapLogoAndDescription {
+    display: flex;
+}
+
+.logo {
+    width: 12em;
+    height: 5em;
+    margin-left: 10px; 
+}
+
+.description {
+    flex-direction: column;
+    margin-left: 50px;
+    width: 265px;
+}
+
+.description h1 {
+    color: orangered;
+}
+
+.hamburger {
+    display: none;   
+}
+
+#toggle {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;   
+    justify-content: flex-end;
+}
+
+.navigation a {
+    display: block;
+    width: 150px;
+    padding: 1.5em 1em;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navigation a:link {
+    color: white;
+}
+
+.navigation a:visited {
+    color: white;
+}
+
+.navigation a:hover {
+    background-color: orangered;
+}
+
+.navigation a:active {
+    background-color: white;
+    color: orangered;
+}
+
+.navigation li {   
+    margin: auto;
+}
+
+/* Main and Aside */
+/* Main */
+
+.wrapMainAndAside {
+    width: 90%;
+    margin: 10px auto;   
+}
+
+.main {
+    float: left;
+    width: 65%;
+    padding: 10px;   
+}
+
+.main h3 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.main img {
+     width: 250px;
+    margin: 10px;
+}
+
+.main img:first-of-type {  
+    float: left;
+}
+
+.main p img:last-of-type {
+    clear: left;
+    float: right;
+}
+
+.main table {   
+    width: 100%;   
+}
+
+.main table th {
+    background-color: black;
+    color: white;   
+}
+
+.main table td {
+    padding: 5px;
+}
+
+.main table tr:nth-child(odd) {
+    background-color: gray;
+}
+
+/* Main for pages who are not index */
+
+.main2 {
+    overflow: hidden;
+    margin: 20px auto;   
+}
+
+.main2 .section {
+    width: 50%;
+}
+
+.main2 .section:nth-child(odd) {
+    float: left;   
+}
+
+.main2 .section:nth-child(even) {
+    float: right;   
+}
+
+.main2 .section:last-child {
+    float: none;
+    width: auto;
+    clear: both;
+}
+
+.main2 .section div {
+    width: 90%;
+    margin: 20px auto;   
+}
+
+.main2 .section img {   
+    width: 100%;   
+}
+
+.main2 .section label {
+    display: none;
+}
+
+.main2 .section input {
+    display: none;
+}
+
+/* Aside */
+
+.aside {
+    width: 35%; 
+    float: right;  
+}
+
+.aside h2 {
+    text-align: center;
+   margin: 20px;
+}
+
+.aside h4 {
+    text-align: center;
+    margin: 20px;
+}
+
+iframe {
+   margin:20px auto;
+    width: 100%;
+}
+
+/* Footer */
+
+.footer {
+    clear: both;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+/* Mobile and tablet screen*/
+
+@media all and (max-width: 988px) {
+   
+    * {     
+        flex-direction: column;       
+    }  
+
+/* Header */
+    
+    .logo {
+    margin: auto;
+    }
+    
+    .description {
+    margin: 10px auto;
+    text-align: center;
+    }
+    
+    .navigation {
+        display: none;
+    }
+    
+/* Hamburger menu */
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;   
+    }
+    
+    .line {
+        margin-top: 5px;
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        cursor: pointer; 
+    }
+    
+    .line::before, .line::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: white;  
+    }
+
+    .line::before {
+        top: 14px;    
+    }
+
+    .line::after {
+        top: 23px;
+    }
+    
+    #toggle:checked ~ .navigation {
+        display: block;    
+    }
+
+    #toggle:checked + .hamburger .line::before { 
+        transform: rotate(90deg);
+        top: 0px;
+    }
+
+    #toggle:checked + .hamburger .line::after {
+        display: none;     
+    }
+
+    #toggle:checked + .hamburger {
+       top: 20px; 
+    }
+
+    #toggle:checked + .hamburger .line {
+        transform: rotate(-45deg);
+        top: 40px;  
+    } 
+     
+/* Mein for every pages */
+    
+    .main {
+        width: 100%;
+        float: none;
+    }
+    
+    .main img {
+        width: 100%;
+        float: none;
+    }
+    
+    .aside {
+        width: 100%;
+        float: none;
+    }
+    
+    .main2 .section {
+        clear: both;
+        float: none;
+        width: auto;
+        margin: 10px;
+    }
+    
+    .main2 .section p label {
+        display: block;
+        color: red;
+        cursor: pointer;
+    }
+    
+    .main2 .section p span {
+       display: none;
+    }
+    
+    #toggle1:checked ~ .more1,
+    #toggle2:checked ~ .more2,
+    #toggle3:checked ~ .more3,
+    #toggle4:checked ~ .more4,
+    #toggle5:checked ~ .more5,
+    #toggle6:checked ~ .more6 {
+       display: block;
+    }
+     
+    .main2 .section img {
+        height: auto
+    }
+    
+    
+}
