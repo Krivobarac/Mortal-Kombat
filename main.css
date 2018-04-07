@@ -181,6 +181,15 @@ body {
     display: none;
 }
 
+.main3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.main3 .galery {
+    
+}
+
 /* Aside */
 
 .aside {
