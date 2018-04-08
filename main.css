@@ -66,15 +66,12 @@ body {
     color: white;
     text-decoration: none;
     cursor: pointer;
+    transition: .5s;
 }
 
-.navigation a:link {
-    color: white;
-}
+.navigation a:link {}
 
-.navigation a:visited {
-    color: white;
-}
+.navigation a:visited {}
 
 .navigation a:hover {
     background-color: orangered;
@@ -182,13 +179,27 @@ body {
 }
 
 .main3 {
-    display: flex;
-    flex-direction: row;
+    
+    clear: both;
 }
 
-.main3 .galery {
-    
+.main3 .galery-row {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
 }
+
+.main3 .galery-row img {
+    display: flex;
+   
+    width: 30%;
+    height: 25%;
+    border: 5px solid orangered;
+    padding: 3px;
+}
+
 
 /* Aside */
 
@@ -223,6 +234,10 @@ iframe {
     margin-bottom: 5px;
 }
 
+.footer a img{
+   margin-left: 10px;
+}
+
 /* Mobile and tablet screen*/
 
 @media all and (max-width: 988px) {
@@ -233,17 +248,19 @@ iframe {
 
 /* Header */
     
-    .logo {
-    margin: auto;
+    .wrapLogoAndDescription a {
+        margin: auto;
     }
     
     .description {
-    margin: 10px auto;
-    text-align: center;
+        margin: 10px auto;
+        text-align: center;
     }
     
     .navigation {
-        display: none;
+        height: 0px;
+        overflow: hidden;
+        transition: height .5s;
     }
     
 /* Hamburger menu */
@@ -255,56 +272,49 @@ iframe {
         right: 10px;
         cursor: pointer;
         width: 30px;
-        height: 30px;   
+        height: 20px;   
     }
     
-    .line {
-        margin-top: 5px;
+    .line1, .line2, .line3 {
+        position: relative;
         display: block;
         width: 30px;
         height: 3px;
         background-color: white;
-        cursor: pointer; 
+        cursor: pointer;
+        transition: .5s;
     }
     
-    .line::before, .line::after {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 3px;
-        background-color: white;  
+    .line1 {
+        top: 0px;
     }
-
-    .line::before {
-        top: 14px;    
+    
+    .line2 {
+        top: 5px;
     }
-
-    .line::after {
-        top: 23px;
+    
+    .line3 {
+        top: 10px;
     }
     
     #toggle:checked ~ .navigation {
-        display: block;    
+        height: 210px;
     }
 
-    #toggle:checked + .hamburger .line::before { 
-        transform: rotate(90deg);
-        top: 0px;
+    #toggle:checked + .hamburger .line1 { 
+        transform: rotate(45deg);
+        top: 8px;
     }
 
-    #toggle:checked + .hamburger .line::after {
+    #toggle:checked + .hamburger .line2 {
         display: none;     
     }
 
-    #toggle:checked + .hamburger {
-       top: 20px; 
-    }
-
-    #toggle:checked + .hamburger .line {
+    #toggle:checked + .hamburger .line3 {
         transform: rotate(-45deg);
-        top: 40px;  
+        top: 5px;  
     } 
-     
+   
 /* Mein for every pages */
     
     .main {
@@ -347,10 +357,17 @@ iframe {
     #toggle6:checked ~ .more6 {
        display: block;
     }
-     
-    .main2 .section img {
-        height: auto
+}
+
+@media all and (max-width: 600px) {
+    .main3 .galery-row {   
+        flex-direction: column;
+        margin: 0;
     }
-    
-    
+
+    .main3 .galery-row img {
+        margin: 10px 0;
+        width: 100%;
+        height: auto;
+    }
 }
