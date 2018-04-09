@@ -179,8 +179,8 @@ body {
 }
 
 .main3 {
-    
     clear: both;
+    position: relative;
 }
 
 .main3 .galery-row {
@@ -191,14 +191,26 @@ body {
     margin: 10px 0;
 }
 
-.main3 .galery-row img {
-    display: flex;
-   
+.main3 .galery-row img { 
     width: 30%;
     height: 25%;
     border: 5px solid orangered;
     padding: 3px;
+    cursor: zoom-in;
 }
+
+.main3 .galery-row img:active  {
+    position: fixed;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    padding: 0px;
+    z-index: 1;
+}
+
+
+
+
 
 
 /* Aside */
@@ -369,5 +381,11 @@ iframe {
         margin: 10px 0;
         width: 100%;
         height: auto;
+    }
+    
+    .main3 .galery-row img:active {
+        position: inherit;
+        width: 100%;
+        height: 100%;     
     }
 }
