@@ -1,3 +1,3 @@
 # Mortal-Kombat
 
-Mini sajt za vezbu!!!
+Mini site for exercise!!!
