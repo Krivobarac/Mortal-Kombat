@@ -208,10 +208,70 @@ body {
     z-index: 1;
 }
 
+.main4 div {
+    margin-top: 20px;
+}
 
+.main4 h3 {
+    text-align: center;
+}
 
+.main4 .userData,
+.main4 .console { 
+    width: 50%;
+    float: left;  
+}
 
+.main4 .userData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.main4 h5 {
+    text-align: center;   
+}
+
+.main4 .checkbox {
+    width: 100px;
+    margin: auto;
+}
+
+.main4 .someting {
+    clear: both;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.main4 .someting textarea {
+    max-width: 70%;
+    min-width: 40%;
+    max-height: 400px;
+    min-height: 200px;
+}
+
+.main4 button {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px; 
+}
+
+.main4 .gif {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.main4 .gif img { 
+    margin: 5px;
+    display: inline-block;
+    width: 33%;
+    height: 250px;
+    align-content: space-around;
+}
 
 /* Aside */
 
@@ -222,7 +282,7 @@ body {
 
 .aside h2 {
     text-align: center;
-   margin: 20px;
+    margin: 20px;
 }
 
 .aside h4 {
@@ -369,6 +429,19 @@ iframe {
     #toggle6:checked ~ .more6 {
        display: block;
     }
+    
+    .main4 button {
+        flex-direction: row;
+    }
+    
+    .main4 .gif {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main4 .gif img{
+        width: 100%;     
+    }
 }
 
 @media all and (max-width: 600px) {
@@ -387,5 +460,27 @@ iframe {
         position: inherit;
         width: 100%;
         height: 100%;     
+    }
+    
+    .main4 form .userData {
+        float: none;
+        width: 100%;    
+    }
+    
+    .main4 form .console {
+        width: 100%;    
+    }
+    
+    .main4 .someting {
+        margin: 0;
+    }
+    
+    .main4 button {
+        flex-direction: row;
+    }
+    
+    .main4 .gif img{
+        width: 100%;
+        height: auto;
     }
 }
