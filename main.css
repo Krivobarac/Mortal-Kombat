@@ -1,15 +1,16 @@
 /* Custom */
 
 * {
-    box-sizing: border-box;  
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
 body {
     font-family: Comic Sans MS, cursive, sans-serif;
-    background-color: #bfbfbf;   
+    background-color: #bfbfbf;
 }
+
 
 /* Header (logo and navigation) */
 
@@ -30,7 +31,7 @@ body {
 .logo {
     width: 12em;
     height: 5em;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 
 .description {
@@ -44,7 +45,7 @@ body {
 }
 
 .hamburger {
-    display: none;   
+    display: none;
 }
 
 #toggle {
@@ -53,7 +54,7 @@ body {
 
 .navigation {
     display: flex;
-    list-style-type: none;   
+    list-style-type: none;
     justify-content: flex-end;
 }
 
@@ -82,22 +83,25 @@ body {
     color: orangered;
 }
 
-.navigation li {   
+.navigation li {
     margin: auto;
 }
 
+
 /* Main and Aside */
+
+
 /* Main */
 
 .wrapMainAndAside {
     width: 90%;
-    margin: 10px auto;   
+    margin: 10px auto;
 }
 
 .main {
     float: left;
     width: 65%;
-    padding: 10px;   
+    padding: 10px;
 }
 
 .main h3 {
@@ -106,11 +110,11 @@ body {
 }
 
 .main img {
-     width: 250px;
+    width: 250px;
     margin: 10px;
 }
 
-.main img:first-of-type {  
+.main img:first-of-type {
     float: left;
 }
 
@@ -119,13 +123,13 @@ body {
     float: right;
 }
 
-.main table {   
-    width: 100%;   
+.main table {
+    width: 100%;
 }
 
 .main table th {
     background-color: black;
-    color: white;   
+    color: white;
 }
 
 .main table td {
@@ -136,11 +140,12 @@ body {
     background-color: gray;
 }
 
+
 /* Main for pages who are not index */
 
 .main2 {
     overflow: hidden;
-    margin: 20px auto;   
+    margin: 20px auto;
 }
 
 .main2 .section {
@@ -148,11 +153,11 @@ body {
 }
 
 .main2 .section:nth-child(odd) {
-    float: left;   
+    float: left;
 }
 
 .main2 .section:nth-child(even) {
-    float: right;   
+    float: right;
 }
 
 .main2 .section:last-child {
@@ -163,11 +168,11 @@ body {
 
 .main2 .section div {
     width: 90%;
-    margin: 20px auto;   
+    margin: 20px auto;
 }
 
-.main2 .section img {   
-    width: 100%;   
+.main2 .section img {
+    width: 100%;
 }
 
 .main2 .section label {
@@ -191,7 +196,7 @@ body {
     margin: 10px 0;
 }
 
-.main3 .galery-row img { 
+.main3 .galery-row img {
     width: 30%;
     height: 25%;
     border: 5px solid orangered;
@@ -199,7 +204,7 @@ body {
     cursor: zoom-in;
 }
 
-.main3 .galery-row img:active  {
+.main3 .galery-row img:active {
     position: fixed;
     top: 5%;
     width: 90%;
@@ -217,9 +222,9 @@ body {
 }
 
 .main4 .userData,
-.main4 .console { 
+.main4 .console {
     width: 50%;
-    float: left;  
+    float: left;
 }
 
 .main4 .userData {
@@ -229,7 +234,7 @@ body {
 }
 
 .main4 h5 {
-    text-align: center;   
+    text-align: center;
 }
 
 .main4 .checkbox {
@@ -256,7 +261,7 @@ body {
     cursor: pointer;
     width: 100px;
     height: 30px;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .main4 .gif {
@@ -265,7 +270,7 @@ body {
     align-content: space-around;
 }
 
-.main4 .gif img { 
+.main4 .gif img {
     margin: 5px;
     display: inline-block;
     width: 33%;
@@ -273,11 +278,12 @@ body {
     align-content: space-around;
 }
 
+
 /* Aside */
 
 .aside {
-    width: 35%; 
-    float: right;  
+    width: 35%;
+    float: right;
 }
 
 .aside h2 {
@@ -291,9 +297,10 @@ body {
 }
 
 iframe {
-   margin:20px auto;
+    margin: 20px auto;
     width: 100%;
 }
+
 
 /* Footer */
 
@@ -306,37 +313,31 @@ iframe {
     margin-bottom: 5px;
 }
 
-.footer a img{
-   margin-left: 10px;
+.footer a img {
+    margin-left: 10px;
 }
+
 
 /* Mobile and tablet screen*/
 
 @media all and (max-width: 988px) {
-   
-    * {     
-        flex-direction: column;       
-    }  
-
-/* Header */
-    
+    * {
+        flex-direction: column;
+    }
+    /* Header */
     .wrapLogoAndDescription a {
         margin: auto;
     }
-    
     .description {
         margin: 10px auto;
         text-align: center;
     }
-    
     .navigation {
         height: 0px;
         overflow: hidden;
         transition: height .5s;
     }
-    
-/* Hamburger menu */
-    
+    /* Hamburger menu */
     .hamburger {
         display: block;
         position: absolute;
@@ -344,10 +345,11 @@ iframe {
         right: 10px;
         cursor: pointer;
         width: 30px;
-        height: 20px;   
+        height: 20px;
     }
-    
-    .line1, .line2, .line3 {
+    .line1,
+    .line2,
+    .line3 {
         position: relative;
         display: block;
         width: 30px;
@@ -356,130 +358,105 @@ iframe {
         cursor: pointer;
         transition: .5s;
     }
-    
     .line1 {
         top: 0px;
     }
-    
     .line2 {
         top: 5px;
     }
-    
     .line3 {
         top: 10px;
     }
-    
-    #toggle:checked ~ .navigation {
+    #toggle:checked~.navigation {
         height: 210px;
     }
-
-    #toggle:checked + .hamburger .line1 { 
+    #toggle:checked+.hamburger .line1 {
         transform: rotate(45deg);
         top: 8px;
     }
-
-    #toggle:checked + .hamburger .line2 {
-        display: none;     
+    #toggle:checked+.hamburger .line2 {
+        display: none;
     }
-
-    #toggle:checked + .hamburger .line3 {
+    #toggle:checked+.hamburger .line3 {
         transform: rotate(-45deg);
-        top: 5px;  
-    } 
-   
-/* Mein for every pages */
-    
+        top: 5px;
+    }
+    /* Mein for every pages */
     .main {
         width: 100%;
         float: none;
     }
-    
     .main img {
         width: 100%;
         float: none;
     }
-    
     .aside {
         width: 100%;
         float: none;
     }
-    
     .main2 .section {
         clear: both;
         float: none;
         width: auto;
         margin: 10px;
     }
-    
     .main2 .section p label {
         display: block;
         color: red;
         cursor: pointer;
     }
-    
     .main2 .section p span {
-       display: none;
+        display: none;
     }
-    
-    #toggle1:checked ~ .more1,
-    #toggle2:checked ~ .more2,
-    #toggle3:checked ~ .more3,
-    #toggle4:checked ~ .more4,
-    #toggle5:checked ~ .more5,
-    #toggle6:checked ~ .more6 {
-       display: block;
+    #toggle1:checked~.more1,
+    #toggle2:checked~.more2,
+    #toggle3:checked~.more3,
+    #toggle4:checked~.more4,
+    #toggle5:checked~.more5,
+    #toggle6:checked~.more6 {
+        display: block;
     }
-    
     .main4 button {
         flex-direction: row;
     }
-    
     .main4 .gif {
         display: flex;
         flex-direction: column;
     }
-    
-    .main4 .gif img{
-        width: 100%;     
+    .main4 .gif img {
+        width: 100%;
     }
 }
 
 @media all and (max-width: 600px) {
-    .main3 .galery-row {   
+    .main3 .galery-row {
         flex-direction: column;
         margin: 0;
     }
-
     .main3 .galery-row img {
         margin: 10px 0;
         width: 100%;
         height: auto;
     }
-    
     .main3 .galery-row img:active {
         position: inherit;
         width: 100%;
-        height: 100%;     
+        height: 100%;
     }
-    
     .main4 form .userData {
         float: none;
-        width: 100%;    
+        width: 100%;
     }
-    
     .main4 form .console {
-        width: 100%;    
+        width: 100%;
     }
-    
     .main4 .someting {
         margin: 0;
     }
-    
     .main4 button {
         flex-direction: row;
     }
-    
-    .main4 .gif img{
+    .main4 .gif img {
         width: 100%;
         height: auto;
     }
