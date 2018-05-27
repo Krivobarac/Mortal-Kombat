@@ -430,6 +430,11 @@ iframe {
 }
 
 @media all and (max-width: 600px) {
+    .main table tr th:nth-child(3),
+	.main table tr td:nth-child(3) {
+		display: none;
+	}
+    
     .main3 .galery-row {
         flex-direction: column;
         margin: 0;
